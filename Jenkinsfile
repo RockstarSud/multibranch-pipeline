@@ -15,8 +15,13 @@ pipeline {
            sh 'echo "testing application..."'
         }
       }
-
-         stage("Deploy nodejs application") { 
+      
+     stage('UAT') { 
+        steps { 
+           sh 'echo "UAT test..."'
+        }
+      }
+      stage("Deploy nodejs application") { 
          steps { 
            sh 'echo "deploying application..."'
          }
